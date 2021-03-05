@@ -20,7 +20,8 @@
     "mysql2": "^1.6.5",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
-    "sequelize": "^5.8.6"
+    "sequelize": "^5.8.6",
+    "underscore-node": "^0.1.2"
   },
   "devDependencies": {
     "chai": "^4.1.2",
