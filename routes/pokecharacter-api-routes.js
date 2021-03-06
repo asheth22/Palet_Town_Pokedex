@@ -13,10 +13,10 @@ var db = require("../models");
 module.exports = function(app) {
 
   // GET route for getting all of the posts
-  app.get("/api/posts", function(req, res) {
+  app.get("/api/pokecharacter", function(req, res) {
     var query = {};
-    if (req.query.author_id) {
-      query.AuthorId = req.query.author_id;
+    if (req.query.trainer_id) {
+      query.TrainerId = req.query.author_id;
     }
     // 1. Add a join here to include all of the Authors to these posts
     db.Post.findAll({
