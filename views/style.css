@@ -878,19 +878,28 @@ button:focus {
 }
 
 .cardcontainer{
-  margin-left: 390px;
+  margin-left: 270px;
   font-family: 'DotGothic16', sans-serif;
   margin-bottom: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  flex-grow: 0;
 }
 
-.pokecardcontainer{
-  margin-left: 700px;
+#pokecardcontainer{
+  margin-left: 100px;
   font-family: 'DotGothic16', sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  flex-grow: 0;
 }
 
 .pokecard1{
   height: 150px;
   width: 200px;
+  display: inline-block;
   background-image: linear-gradient(rgb(39, 173, 39),  antiquewhite);
   margin-bottom: 20px;
   border:2.5px;
@@ -901,6 +910,7 @@ button:focus {
 .pokecard2{
   height: 150px;
   width: 200px;
+  display: inline-block;
   background-image: linear-gradient( antiquewhite, rgb(139, 45, 45));
   margin-bottom: 20px;
   border:2.5px;
@@ -911,6 +921,7 @@ button:focus {
 .pokecard3{
   height: 150px;
   width: 200px;
+  display: inline-block;
   background-image: linear-gradient(#fe0065, antiquewhite);
   margin-bottom: 20px;
   border:2.5px;
@@ -921,6 +932,7 @@ button:focus {
 .pokecard4{
   height: 150px;
   width: 200px;
+  display: inline-block;
   background-image: linear-gradient(antiquewhite, rgb(243, 221, 22));
   margin-bottom: 20px;
   border:2.5px;
@@ -931,6 +943,7 @@ button:focus {
 .pokecard5{
   height: 150px;
   width: 200px;
+  display: inline-block;
   background-image: linear-gradient(rgb(39, 42, 212), antiquewhite);
   margin-bottom: 20px;
   border:2.5px;
@@ -940,6 +953,7 @@ button:focus {
 .pokecard6{
   height: 150px;
   width: 200px;
+  display: inline-block;
   background-image: linear-gradient( antiquewhite, rgb(130, 13, 197));
   margin-bottom: 20px;
   border:2.5px;
