@@ -1,4 +1,5 @@
 use pokemon;
+insert into pokecharacter (pokeName, energyType, cardId, attack, nickname) values ("Bulbasaur", "Grass", "001", "Vine Whip", "");
 insert into pokecharacter (pokeName, energyType, cardId, attack, nickname) values ("Ivysaur", "Grass", "002", "Mega Drain", "");
 insert into pokecharacter (pokeName, energyType, cardId, attack, nickname) values ("Venusaur", "Grass", "003", "Solar Beam", "");
 insert into pokecharacter (pokeName, energyType, cardId, attack, nickname) values ("Charmander", "Fire", "004", "Ember", "");
