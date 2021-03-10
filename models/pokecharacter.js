@@ -4,36 +4,41 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [1,25]
+        len: [1, 25]
       }
     },
     energyType: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [1,25]
+        len: [1, 25]
       }
     },
     cardId: {
       type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
-        len: [1,10]
+        len: [1, 10]
       }
     },
     attack: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [1,25]
+        len: [1, 25]
       }
     },
     nickname: {
       type: DataTypes.STRING,
       allowNull: false,
-      len: [1,25]
+      len: [1, 25]
     }
-  });
+  
+  }, {
+  freezeTableName: true, // Model tableName will be the same as the model name
+  timestamps: false,
+  // underscored: true
+   });
 
   Pokecharacter.associate = function(models) {
     // Associating Author with Posts
@@ -44,4 +49,5 @@ module.exports = function(sequelize, DataTypes) {
   };
 
   return Pokecharacter;
+  
 };
