@@ -35,13 +35,11 @@ module.exports = function(sequelize, DataTypes) {
     }
   });
 
-  Post.associate = function(models) {
-    // We're saying that a Post should belong to an Author
-    // A Post can't be created without an Author due to the foreign key constraint
-    Post.belongsTo(models.trainer, {
-      foreignKey: {
-        allowNull: false
-      }
+  Pokecharacter.associate = function(models) {
+    // Associating Author with Posts
+    // When an Author is deleted, also delete any associated Posts
+    Pokecharacter.belongsToMany(models.User, {through: 'UserPokemon' 
+      
     });
   };
 
