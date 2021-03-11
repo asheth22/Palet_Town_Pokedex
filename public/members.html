@@ -1,80 +1,53 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
-<head>
+  <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Pallet Town Pokedex</title>
-</head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <title>Pallet Town Pokedex</title>
+    
+      <link href="stylesheets/style.css" rel="stylesheet">
+  </head>
 
 <body>
-    <nav class="navbar" style="background-color: rgb(109, 43, 43)">
-        <a class="navbar-title" href="index.html">Welcome to your Pallet Town Pokedex!</a>
-        <a class="navbar-link1" href="homepage.html"> Homepage</a>
-        <a class="navbar-link2" href="pokedex.html"> Training Deck</a>
-    </nav>
+  <nav class="navbar" style="background-color: rgb(109, 43, 43)">
+    <a class="navbar-title" href="index.html">Welcome <span class="member-name"></span> to your Pallet Town Pokedex!</a>
+    <a class="navbar-link1" href="homepage.html"> Homepage</a>
+    <a class="navbar-link2" href="pokedex.html"> Training Deck</a>
+    <a class="navbar-link2" href="/logout"> Logout</a>
+</nav>
 
-    <div class="container2">
-        <div class="speech-bubble2">
-            <div class="row">
-                <div class="column">
-                    <div class="pokemonChoices">
-                        What POKEMON have you caught?
-                    </div>
-                    <div id="circle">
-                        <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Starter POKEMON
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="nicknameContainer">
-                    <div class="pokemonChoices">
-                        Please enter a NICKNAME for your
-                    </div>
-                    <img class = "poketitle" src= "https://user-images.githubusercontent.com/74163812/110190308-a3489c80-7df0-11eb-984f-ec1700e21c60.gif">
-                    <form>
-                        <div class="nn-form-group">
-                            <div class="col-4">
-                                <input type="nickname" class="form-control" id="nickname"
-                                    placeholder="Please Enter Nickname">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-sm-10">
-                                <button type="submit" class="btn-submit">Submit</button>
-                            </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col mycards">
+        
+      </div>
+      <!-- <div class="col-md-6 col-md-offset-3">
+        <h2>Welcome <span class="member-name"></span></h2>
+      </div> -->
     </div>
+  </div>
+  <div class="row">
+      <div class="col-sm-4">
+        <button type="button" class="btn btn-success addCardBtn">Add a Card</button>
+      </div>
+      <div class="col-sm-4">
+        <button type="button" class="btn btn-danger delCardBtn">Delete Card</button>
+      </div>
+      <div class="col-sm-4">
+        <button type="button" class="btn btn-info updateCardBtn">Update Nickname</button>
+      </div>
+</div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script type="text/javascript" src="js/members.js"></script>
 
-    <div class="oak2">
-        <img class="pokeball"
-            src="https://user-images.githubusercontent.com/74163812/110055963-f1e03300-7d2b-11eb-9714-addc584c19a1.png"
-            width="300px" height="300px" viewBox="-0.5 -0.5 168 198">
-    </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-   <script type="text/javascript" src="js/welcome.js"></script>
-
-   
 </body>
 
 </html>

@@ -13,13 +13,18 @@ module.exports = function(app) {
       // username: req.user.username,
       id: req.user.id
     });
+    res.render("member")
   });
 
   // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to
   // how we configured our Sequelize User Model. If the user is created successfully, proceed to log the user in,
   // otherwise send back an error
   app.post("/api/signup", async (req, res) => {
-    const PokemonCards = await db.Pokecharacter.findAll({})
+    const PokemonCards = await db.Pokecharacter.findAll({
+      where: {
+        id: [1,2,3,4,5]
+      }
+    })
     console.log("Pokemoncards:" , PokemonCards)
     const user = await db.User.create({
       email: req.body.email,
@@ -29,7 +34,10 @@ module.exports = function(app) {
       // Pokecharacters:PokemonCards
     })
     user.setPokecharacters(PokemonCards);
-    user.save(); 
+    user.save();
+    
+    res.redirect(307, "/api/login");
+
   });
 
   // Route for logging user out

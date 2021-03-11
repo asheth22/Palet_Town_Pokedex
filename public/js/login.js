@@ -29,6 +29,7 @@ $(document).ready(() => {
       password: password
     })
       .then(() => {
+        console.log("lodading members")
         window.location.replace("/members");
         // If there's an error, log the error
       })

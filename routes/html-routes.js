@@ -4,19 +4,26 @@ const path = require("path");
 // Requiring our custom middleware for checking if a user is logged in
 const isAuthenticated = require("../config/middleware/isAuthenticated");
 
-module.exports = function(app) {
+module.exports = function (app) {
+  
   app.get("/", (req, res) => {
+    res.render('index');
     // If the user already has an account send them to the members page
-    if (req.user) {
-      res.redirect("/members");
-    }
-    res.sendFile(path.join(__dirname, "../public/signup.html"));
+    // if (req.user) {
+    //   console.log("returned to html routes /")
+    //   res.redirect("/members");
+    // }
+    // res.sendFile(path.join(__dirname, "../public/signup.html"));
+    
   });
 
   app.get("/login", (req, res) => {
+   
     // If the user already has an account send them to the members page
     if (req.user) {
-      res.redirect("/members");
+      console.log("user logged in:", req.user)
+      res.render('member')
+      // res.redirect("/members");
     }
     res.sendFile(path.join(__dirname, "../public/login.html"));
   });
