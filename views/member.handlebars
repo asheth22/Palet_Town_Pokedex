@@ -1,0 +1,25 @@
+<nav class="navbar" style="background-color: rgb(109, 43, 43)">
+    <a class="navbar-title" href="index.html">Welcome <span class="member-name"></span> to your Pallet Town Pokedex!</a>
+    <a class="navbar-link1" href="homepage.html"> Homepage</a>
+    <a class="navbar-link2" href="pokedex.html"> Training Deck</a>
+    <a class="navbar-link2" href="/logout"> Logout</a>
+</nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="col mycards">
+          {{#each pokecards}}
+            {{this.id}}
+            {{this.pokeName}}
+            {{this.Attack}}
+       {{/each}}
+      </div>
+      <!-- <div class="col-md-6 col-md-offset-3">
+        <h2>Welcome <span class="member-name"></span></h2>
+      </div> -->
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script type="text/javascript" src="js/members.js"></script>
