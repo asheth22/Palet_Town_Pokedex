@@ -2,7 +2,7 @@
 $(document).ready(() => {
   const addCardBtn = $(".addCardBtn");
   const delCardBtn = $(".delCardBtn");
-  const updateCardBtn = $("updateCardBtn");
+  const $updateCardBtn = $(".updateCardBtn");
   // This file just does a GET request to figure out which user is logged in
   // and updates the HTML on the page
   
@@ -23,9 +23,16 @@ $(document).ready(() => {
     $mycards.empty();
     const rowsToAdd = [];
     $mycards.append("<h2> Here are your Cards you Own </h2>")
+    // for (let i = 0; i < pokeCards.length; i++) {
+    //   rowsToAdd.push(pokeCards[i].pokeName);
+    //   $mycards.append(pokeCards[i].pokeName + "<br>");
+    // }
     for (let i = 0; i < pokeCards.length; i++) {
-      rowsToAdd.push(pokeCards[i].pokeName);
-      $mycards.append(pokeCards[i].pokeName + "<br>");
+      $mycards.append(`<div class="pokecard${pokeCards[i].energyType}">
+      <br>Pokemon Name:${pokeCards[i].pokeName}</br>
+      <br>Card No.: ${pokeCards[i].cardId}</br>
+      <br>Attack: ${pokeCards[i].attack}</br>
+      </div>`);
     }
   
 }
@@ -43,19 +50,45 @@ function getCards(userId) {
   }
 
   function addCard() {
-    
+    const pokeCard = {
+      pokeName: "Bulbasaur",
+      energyType: "Grass",
+      cardId: "001",
+      attack: "Vine Whip",
+      nickname: "new-card"
+    }
+    // let pokeCardS = JSON.stringify(pokeCard);
+    $.ajax({
+      method: "POST",
+      url: "/api/addcard/", 
+      data: pokeCard
+    }).then(data => {     
+      console.log("Card added", data);
+     
+    });
 
   }
 
   function updateCard() {
-
+    const id = 2;
+    const nickname = 'green'
+    $.ajax({
+      method: "PUT",
+      url: "/api/cards/" + id + "/" + nickname
+      
+    }).then(data => {     
+      console.log("Card updated", data);
+     
+    });
   }
 
   function deleteCard() {
-    const id = $(this).data("id");
+    // const id = $(this).data("id");
+    const id = 2;
+    const userId = 2;
     $.ajax({
       method: "DELETE",
-      url: "/api/todos/" + id
+      url: "/api/cards/" + id + "/" + userId
     }).then(data => {     
       console.log("Card Deleted", data);
      
@@ -71,10 +104,10 @@ function getCards(userId) {
   delCardBtn.on("click", event => {
     event.preventDefault();
     console.log("activated delete card")
-    
+    deleteCard()
   });
 
-  updateCardBtn.on("click", event => {
+  $updateCardBtn.on("click", event => {
     event.preventDefault();    
     console.log("activated update card")
     updateCard()
