@@ -33,6 +33,7 @@ module.exports = function(app) {
       
       // Pokecharacters:PokemonCards
     })
+    console.log("User at signup: ", user)
     user.setPokecharacters(PokemonCards);
     user.save();
     
