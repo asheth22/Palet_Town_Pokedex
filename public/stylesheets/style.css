@@ -43,102 +43,9 @@ form.login {
 }
 
 
-.logo {
-  justify-self: start;
-  width: 100%;
-  height: 20%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.search-container {
-  width: 200px;
-  height: 80px;
-}
-
-/* poke-ball */
-.ball-container {
-  overflow: hidden;
-  width: 60px;
-  height: 60px;
-  border: 2px solid black;
-  border-radius: 50%;
-  position: relative;
-  animation: shake 1.5s ease-in infinite;
-  animation-play-state: paused;
-  margin-left: 500px;
-}
-
-@keyframes shake {
-  0% {
-    transform: rotate(5deg);
-  }
-  5% {
-    transform: rotate(-5deg);
-  }
-  10% {
-    transform: rotate(5deg);
-  }
-  15% {
-    transform: rotate(-5deg);
-  }
-  20% {
-    transform: rotate(5deg);
-  }
-  25% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
-.ball-container:hover {
-  cursor: pointer;
-  animation-play-state: running;
-}
-.upper-half-ball {
-  position: absolute;
-  width: 100%;
-  height: 42%;
-  background-color: var(--main-bg-color);
-}
-
-.bottom-half-ball {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 42%;
-  background-color: var(--secondary-bg-color);
-}
-
-.center-ball {
-  background-color: white;
-  width: 20%;
-  height: 20%;
-  border: 2px solid black;
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.center-line {
-  background: black;
-  height: 100%;
-  width: 100%;
-}
-
-input {
-  text-align: center;
-  height: 40px;
-  border-radius: 4px;
-}
 /* poke-dex */
 #pokedex {
-  margin-left: 100px;
+  margin-left: 90px;
   height: 342px;
   width: calc(228px * 2);
   display: flex;
@@ -656,6 +563,8 @@ input {
   background-size: contain;
 }
 
+/* end of pokedex css */
+
 body {
   display: flex;
   justify-content: left;
@@ -666,25 +575,30 @@ body {
 }
 
 .navbar{
-  margin-bottom: 50px;
-  font-family: 'DotGothic16', sans-serif;
-  font-size: 20px;
+height: 75px;
+margin-bottom: 50px;
+font-family: 'DotGothic16', sans-serif;
+font-size: 20px;
+color: white;
 }
 
 .navbar-title{
   font-size: 35px;
   margin-bottom: 150px;
-  margin-left: 30px;
+  color: white;
 }
 
 .navbar-link1{
   margin-left: 400px;
+  margin-right: 30px;
   margin-bottom: 140px;
+  color: white;
 }
 
 .navbar-link2{
   margin-right: 30px;
   margin-bottom: 140px;
+  color: white;
 }
 
 
@@ -707,7 +621,7 @@ grid-row: 2/3;
 text-align: center;
 background: antiquewhite;
 height: 300px;
-width: 900px;
+width: 960px;
 border-radius: 30px;
 display: flex;
 justify-content: center;
@@ -731,7 +645,11 @@ margin-left: 0px;
 }
 
 .form-group{
-  margin-top: 20px;
+  margin-top: 30px;
+}
+
+.col-form-label{
+margin-right: 30px;
 }
 
 .speech-bubble::after {
@@ -807,10 +725,10 @@ color: #333;
 .btn-signIn{
   background-color: rgb(109, 43, 43);
   color: white;
-  font-size: 13px;
+  font-size: 16px;
   margin-left: 60px;
   width: 100px;
-  height: 30px;
+  height: 40px;
 }
 
 #circle {
@@ -875,37 +793,40 @@ height: 120px;
 .btn-submit{
 background-color: rgb(109, 43, 43);
   color: white;
-  font-size: 13px;
+  font-size: 16px;
   margin-left: 60px;
   width: 100px;
-  height: 30px;
+  height: 40px;
 }
 
 .cardcontainer{
-margin-left: 270px;
 font-family: 'DotGothic16', sans-serif;
 margin-bottom: 0px;
 display: flex;
 flex-wrap: wrap;
 text-align: center;
 flex-grow: 0;
+padding: 0px;
 }
 
 #pokecardcontainer{
-margin-left: 100px;
+margin-left: 75px;
+margin-right: 5px;
 font-family: 'DotGothic16', sans-serif;
 display: flex;
 flex-wrap: wrap;
 text-align: center;
 flex-grow: 0;
+padding: 0px
 }
 
 .pokecardWater{
 height: 150px;
 width: 200px;
+margin: 5px;
+margin-bottom: 5px;
 display: inline-block;
 background-color: rgb(123,169,247);
-margin-bottom: 20px;
 border:2.5px;
 border-color: black;
 border-style:solid; 
@@ -914,9 +835,10 @@ border-style:solid;
 .pokecardGrass{
 height: 150px;
 width: 200px;
+margin: 5px;
+margin-bottom: 5px;
 display: inline-block;
 background-color: rgb(152,203,151);
-margin-bottom: 20px;
 border:2.5px;
 border-color: black;
 border-style:solid; 
@@ -925,9 +847,10 @@ border-style:solid;
 .pokecardFire{
 height: 150px;
 width: 200px;
+margin: 5px;
+margin-bottom: 5px;
 display: inline-block;
 background-color: #fe0065;
-margin-bottom: 20px;
 border:2.5px;
 border-color: black;
 border-style:solid; 
@@ -936,9 +859,10 @@ border-style:solid;
 .pokecardElectric{
 height: 150px;
 width: 200px;
+margin: 5px;
+margin-bottom: 5px;
 display: inline-block;
 background-color: #ffeb3a;
-margin-bottom: 20px;
 border:2.5px;
 border-color: black;
 border-style:solid; 
@@ -947,9 +871,10 @@ border-style:solid;
 .pokecardPoison{
 height: 150px;
 width: 200px;
+margin: 5px;
+margin-bottom: 5px;
 display: inline-block;
 background-color: #3bb47d;
-margin-bottom: 20px;
 border:2.5px;
 border-color: black;
 border-style:solid; 
@@ -957,9 +882,10 @@ border-style:solid;
 .pokecardNormal{
 height: 150px;
 width: 200px;
+margin: 5px;
+margin-bottom: 5px;
 display: inline-block;
 background-color: #e1bdd3;
-margin-bottom: 20px;
 border:2.5px;
 border-color: black;
 border-style:solid; 
@@ -968,9 +894,10 @@ border-style:solid;
 .pokecardFlying{
 height: 150px;
 width: 200px;
+margin: 5px;
+margin-bottom: 5px;
 display: inline-block;
 background-color: #a78f7c;
-margin-bottom: 20px;
 border:2.5px;
 border-color: black;
 border-style:solid; 
@@ -979,10 +906,52 @@ border-style:solid;
 .pokecardBug{
 height: 150px;
 width: 200px;
+margin: 5px;
+margin-bottom: 5px;
 display: inline-block;
 background-color: #a55d89;
-margin-bottom: 20px;
 border:2.5px;
 border-color: black;
 border-style:solid; 
 }
+
+.carousel-item.active{
+visibility: visible;
+width: 100%;
+height: auto;
+position: relative;
+margin-left: 0px;
+margin-bottom: 0px;
+margin: 0px;
+padding: 0px;
+
+}
+
+.addCardBtn{
+  font-family: 'DotGothic16', sans-serif;
+  margin-top: 20px;
+  width: 50px;
+}
+
+.delCardBtn{
+  font-family: 'DotGothic16', sans-serif;
+  margin-top: 20px;
+  width: 50px;
+}
+
+.updateCardBtn{
+  font-family: 'DotGothic16', sans-serif;
+  align-content: center;
+  margin-top: 20px;
+  width: 50px;
+
+}
+
+.cardControls{
+  margin-left: 75px;
+}
+
+.pokegroup{
+  margin-top: 00px;
+}
+

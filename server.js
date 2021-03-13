@@ -2,6 +2,7 @@
 const express = require("express");
 const session = require("express-session");
 const path = require("path");
+const _ = require('underscore-node')
 // Requiring passport as we've configured it
 const passport = require("./config/passport");
 
