@@ -4,6 +4,7 @@ $(document).ready(() => {
   const delCardBtn = $(".delCardBtn");
   const $updateCardBtn = $(".updateCardBtn");
   const $mycards = $(".mycards")
+  const $cardsDD = $(".dropdown-item")
 
   // This file just does a GET request to figure out which user is logged in
   // and updates the HTML on the page
@@ -23,10 +24,7 @@ $(document).ready(() => {
     $mycards.empty();
     const rowsToAdd = [];
     $mycards.append("<h2> Here are your Cards you Own </h2>")
-    // for (let i = 0; i < pokeCards.length; i++) {
-    //   rowsToAdd.push(pokeCards[i].pokeName);
-    //   $mycards.append(pokeCards[i].pokeName + "<br>");
-    // }
+   
     for (let i = 0; i < pokeCards.length; i++) {
       $mycards.append(`<div class="pokecard pokecard${pokeCards[i].energyType}">
       <br>Pokemon Name:${pokeCards[i].pokeName}</br>
@@ -34,8 +32,7 @@ $(document).ready(() => {
       <br>Attack: ${pokeCards[i].attack}</br>
       </div>`);
     }
-  
-}
+  }
 function getCards(userId) {
     console.log("user id is: ", userId)
     const queryUrl = "/api/cards/" + userId;
@@ -58,7 +55,7 @@ function getCards(userId) {
       attack: "Vine Whip",
       nickname: "new-card"
     }
-    // let pokeCardS = JSON.stringify(pokeCard);
+    
     $.ajax({
       method: "POST",
       url: "/api/addcard/", 
@@ -119,6 +116,15 @@ function getCards(userId) {
     event.preventDefault();    
     console.log("card selected with mycard", event.target)
     console.log("card selected with mycard", event.target.cardId)
+    // updateCard()
+  });
+
+  $cardsDD.on("click", event => {
+    event.preventDefault();
+    let cardSel = event.target         
+    console.log(typeof(event.target))
+    const id = $(cardSel).attr('id')
+    console.log("card selected id", id)
     // updateCard()
   });
 });
