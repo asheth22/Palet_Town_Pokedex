@@ -5,13 +5,15 @@ $(document).ready(() => {
   const $updateCardBtn = $(".updateCardBtn");
   const $mycards = $(".mycards")
   const $cardsDD = $(".dropdown-item")
-
+  const modal = $("#myModal");
+  let id = 0;
+  let userId; 
   // This file just does a GET request to figure out which user is logged in
   // and updates the HTML on the page
   
   $.get("/api/user_data").then(data => {
     $(".member-name").text(data.email);
-    const userId = data.id;
+    userId = data.id;
     console.log("user data id:", userId)
     getCards(userId);
     
@@ -48,24 +50,37 @@ function getCards(userId) {
   }
 
   function addCard() {
-    const pokeCard = {
-      pokeName: "Bulbasaur",
-      energyType: "Grass",
-      cardId: "001",
-      attack: "Vine Whip",
-      nickname: "new-card"
-    }
-    
+       
     $.ajax({
       method: "POST",
-      url: "/api/addcard/", 
-      data: pokeCard
+      url: "/api/addcard/"+ id  
+      
     }).then(data => {     
       console.log("Card added", data);
      
     });
 
   }
+
+  // function addCard() {
+  //   const pokeCard = {
+  //     pokeName: "Bulbasaur",
+  //     energyType: "Grass",
+  //     cardId: "001",
+  //     attack: "Vine Whip",
+  //     nickname: "new-card"
+  //   }
+    
+  //   $.ajax({
+  //     method: "POST",
+  //     url: "/api/addcard/", 
+  //     data: pokeCard
+  //   }).then(data => {     
+  //     console.log("Card added", data);
+     
+  //   });
+
+  // }
 
   function updateCard() {
     const id = 2;
@@ -80,13 +95,11 @@ function getCards(userId) {
     });
   }
 
-  function deleteCard() {
-    // const id = $(this).data("id");
-    const id = 5;
-    const userId = 25;
+  function deleteCard() {       
+    
     $.ajax({
       method: "DELETE",
-      url: "/api/cards/" + id + "/" + userId
+      url: "/api/cards/" + id 
     }).then(data => {     
       console.log("Card Deleted", data);
      
@@ -95,7 +108,7 @@ function getCards(userId) {
 
   addCardBtn.on("click", event => {
     event.preventDefault();
-    console.log("activated add card")
+    console.log("activated add card", id)
     addCard(); 
   });
   
@@ -123,9 +136,32 @@ function getCards(userId) {
     event.preventDefault();
     let cardSel = event.target         
     console.log(typeof(event.target))
-    const id = $(cardSel).attr('id')
+    id = $(cardSel).attr('id')
     console.log("card selected id", id)
-    // updateCard()
+    
   });
 });
 
+//close the modal
+function closeWindow(){
+  modal.style.display = "none";
+};
+
+//open the modal
+function popup(){
+  modal.style.display = "block";
+  $(".close").on("click",function(event){
+      closeWindow();
+  }); 
+}
+
+//calls all the functions
+function main(){ 
+  $(".updateCardBtn").on("click",function(event){
+      $(document).ready()
+      event.preventDefault();
+      popup();
+  });
+}
+
+main();
