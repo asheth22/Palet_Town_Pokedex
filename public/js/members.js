@@ -5,7 +5,7 @@ $(document).ready(() => {
   const $updateCardBtn = $(".updateCardBtn");
   const $mycards = $(".mycards")
   const $cardsDD = $(".dropdown-item")
-  const modal = $("#myModal");
+  
   let id = 0;
   let userId; 
   // This file just does a GET request to figure out which user is logged in
@@ -33,6 +33,12 @@ $(document).ready(() => {
       <br>Card No.: ${pokeCards[i].cardId}</br>
       <br>Attack: ${pokeCards[i].attack}</br>
       </div>`);
+      // $mycards.append(`<div class="pokecard pokecard${pokeCards[i].energyType}" id ="${pokeCards[i].cardId}">
+      // <button type="button" class="btn btn-danger delCardBtn" id="${pokeCards[i].id}">-</button>
+      // <br>Pokemon Name:${pokeCards[i].pokeName}</br>
+      // <br>Card No.: ${pokeCards[i].cardId}</br>
+      // <br>Attack: ${pokeCards[i].attack}</br>
+      // </div>`);
     }
   }
 function getCards(userId) {
@@ -115,6 +121,10 @@ function getCards(userId) {
   delCardBtn.on("click", event => {
     event.preventDefault();
     console.log("activated delete card")
+    let cardSel = event.target         
+    console.log(typeof(event.target))
+    id = $(cardSel).attr('id')
+    console.log("card selected to delete id", id)
     deleteCard()
   });
 
@@ -140,7 +150,16 @@ function getCards(userId) {
     console.log("card selected id", id)
     
   });
+  main();
 });
+
+//close the modal
+//selcts the pokemon add changes it 
+var modal = document.getElementById("myModal");
+function selectPokemon(pokemon){
+  let mePokemon = pokemon
+  $(".meMenu").html(mePokemon);
+};
 
 //close the modal
 function closeWindow(){
@@ -157,11 +176,16 @@ function popup(){
 
 //calls all the functions
 function main(){ 
+  // $(document).ready()
+ 
   $(".updateCardBtn").on("click",function(event){
-      $(document).ready()
       event.preventDefault();
       popup();
   });
+  $(".dropdown-item").on("click",function(event){
+      event.preventDefault();
+      let pokemonSelected = this.innerHTML;
+      selectPokemon(pokemonSelected);
+  });
 }
 
-main();
