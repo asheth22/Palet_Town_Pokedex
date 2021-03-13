@@ -20,6 +20,7 @@ module.exports = function(app) {
   
   // POST route for adding a new card to the user
   app.post("/api/addcard/:id", async (req, res) => {
+    
     const cardId = req.params.id
     db.User.findOne({  
       where: {
@@ -41,33 +42,35 @@ module.exports = function(app) {
   })
   
   app.delete("/api/cards/:id", async (req, res) => {
-    const userId = req.user.id; 
+    const userId = req.user.id
+    const cardId = req.params.id;
+    console.log("userid in delete: ", userId)
+    console.log("cardid in delete: ", cardId)
     db.User.findAll({
       where: {
-        id: req.params.id
+        id: req.user.id
       },
       include: [db.Pokecharacter]
-    }).then(async function (dbCards, userId) {
-      console.log(dbCards); 
-      
+    }).then(async function (userC, userId) {
+      console.log(userC[0].Pokecharacters); 
+      let userCards = userC[0].Pokecharacters
       let PokemonCards = []
-     
-      for (i = 0; i < dbCards.length; i++) {
-        if (dbCards[i].id !== req.params.id) {
-          PokemonCards.push(dbCards[i]);
+      console.log(userCards[0].dataValues.id, "card id", req.params.id )
+      for (i = 0; i < userCards.length; i++) {
+        if (userCards[i].dataValues.id != req.params.id) {
+          PokemonCards.push(userCards[i]);
         }
       }
-      
+      console.log("Pokecards after delete: ", PokemonCards)
       const user =  await db.User.findOne({
         where: {
           id: req.user.id
         },                
       })
       
-      // user.setPokecharacters(PokemonCards.map(card => card.id));
-      
-      // user.save();    
-      res.json(dbCards);
+      user.setPokecharacters(PokemonCards.map(card => card.id));      
+      user.save();    
+      res.json(userC);
     });
         
 
