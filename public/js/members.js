@@ -25,13 +25,14 @@ $(document).ready(() => {
     let $mycards = $(".mycards")
     $mycards.empty();
     const rowsToAdd = [];
-    $mycards.append("<h2> Here are your Cards you Own </h2>")
+    $mycards.append("<h2> My Cards </h2>")
    
     for (let i = 0; i < pokeCards.length; i++) {
       $mycards.append(`<div class="pokecard pokecard${pokeCards[i].energyType}">
-      <br>Pokemon Name:${pokeCards[i].pokeName}</br>
-      <br>Card No.: ${pokeCards[i].cardId}</br>
-      <br>Attack: ${pokeCards[i].attack}</br>
+      <p>Pokemon Name:${pokeCards[i].pokeName}</p>
+      <p>Nickname: ${pokeCards[i].nickname}</p>
+      <p>Card No.: ${pokeCards[i].cardId}</p>
+      <p>Attack: ${pokeCards[i].attack}</p>
       </div>`);
       // $mycards.append(`<div class="pokecard pokecard${pokeCards[i].energyType}" id ="${pokeCards[i].cardId}">
       // <button type="button" class="btn btn-danger delCardBtn" id="${pokeCards[i].id}">-</button>
