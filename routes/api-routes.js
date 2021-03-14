@@ -1,6 +1,7 @@
 // Requiring our models and passport as we've configured it
 const db = require("../models");
 const passport = require("../config/passport");
+const _ = require('underscore-node')
 
 module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -20,9 +21,13 @@ module.exports = function(app) {
   // how we configured our Sequelize User Model. If the user is created successfully, proceed to log the user in,
   // otherwise send back an error
   app.post("/api/signup", async (req, res) => {
+    const cardArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 29, 20, 21, 22, 23, 24, 25]
+    const sample = _.sample(cardArr, 5)
+    console.log("sample: ", sample)
     const PokemonCards = await db.Pokecharacter.findAll({
       where: {
-        id: [1,2,3,4,5]
+        // id: [1,2,3,4,5]
+        id: sample
       }
     })
     console.log("Pokemoncards:" , PokemonCards)
