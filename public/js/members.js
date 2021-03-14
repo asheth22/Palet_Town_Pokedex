@@ -34,7 +34,7 @@ $(document).ready(() => {
     for (let i = 0; i < pokeCards.length; i++) {
       $mycards.append(`<div class="pokecard pokecard${pokeCards[i].energyType}">
       <p>Pokemon Name:${pokeCards[i].pokeName}
-      <button type="button" class='btn btn-xs btn-danger dc' id = ${pokeCards[i].id}><i class="fas fa-minus"></i></button></p>
+      <button type="button" class='btn btn-xs btn-danger d-flex justify-content-center dc' id = ${pokeCards[i].id}> x </button></p>
       <p>Nickname: ${pokeCards[i].nickname}</p>
       <p>Card No.: ${pokeCards[i].cardId}</p>
       <p>Attack: ${pokeCards[i].attack}</p>     

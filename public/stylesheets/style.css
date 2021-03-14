@@ -156,11 +156,15 @@ body {
   font-family: 'DotGothic16', sans-serif;
   }
   .btn-xs {
-    max-height: 20px;
+    max-height: 25px;
     max-width: 10px;
     float: right;
-    
+    text-align: center;
+    display: inline-flex;
+    align-items: center; 
+    margin-right: 2px;
   }
+
   #dropdownMenuButton{
   background-color: transparent;
   font-family: 'DotGothic16', sans-serif;
@@ -213,7 +217,7 @@ body {
   }
   
   .cardcontainer{
-  width: 800px;
+  width: 900px;
   font-family: 'DotGothic16', sans-serif;
   margin-bottom: 0px;
   display: flex;
@@ -224,7 +228,7 @@ body {
   }
   
   #pokecardcontainer{
-  width: 800px;
+  width: 900px;
   font-family: 'DotGothic16', sans-serif;
   display: flex;
   flex-wrap: wrap;
@@ -235,7 +239,7 @@ body {
   
   .pokecardWater{
   height: 150px;
-  width: 200px;
+  width: 225px;
   margin: 5px;
   margin-bottom: 5px;
   display: inline-block;
@@ -247,7 +251,7 @@ body {
   
   .pokecardGrass{
   height: 150px;
-  width: 200px;
+  width: 225px;
   margin: 5px;
   margin-bottom: 5px;
   display: inline-block;
@@ -259,7 +263,7 @@ body {
   
   .pokecardFire{
   height: 150px;
-  width: 200px;
+  width: 225px;
   margin: 5px;
   margin-bottom: 5px;
   display: inline-block;
@@ -271,7 +275,7 @@ body {
   
   .pokecardElectric{
   height: 150px;
-  width: 200px;
+  width: 225px;
   margin: 5px;
   margin-bottom: 5px;
   display: inline-block;
@@ -283,7 +287,7 @@ body {
   
   .pokecardPoison{
   height: 150px;
-  width: 200px;
+  width: 225px;
   margin: 5px;
   margin-bottom: 5px;
   display: inline-block;
@@ -294,7 +298,7 @@ body {
   }
   .pokecardNormal{
   height: 150px;
-  width: 200px;
+  width: 225px;
   margin: 5px;
   margin-bottom: 5px;
   display: inline-block;
@@ -306,7 +310,7 @@ body {
   
   .pokecardFlying{
   height: 150px;
-  width: 200px;
+  width: 225px;
   margin: 5px;
   margin-bottom: 5px;
   display: inline-block;
@@ -318,7 +322,7 @@ body {
   
   .pokecardBug{
   height: 150px;
-  width: 200px;
+  width: 225px;
   margin: 5px;
   margin-bottom: 5px;
   display: inline-block;
@@ -359,12 +363,7 @@ body {
     margin-top: 20px;
     width: 50px;
   }
-/*   
-  .delCardBtn{
-    font-family: 'DotGothic16', sans-serif;
-    margin-top: 20px;
-    width: 50px;
-  } */
+  
   
   .updateCardBtn{
     font-family: 'DotGothic16', sans-serif;
@@ -375,11 +374,11 @@ body {
   }
   
   .cardControls{
-    margin-left: 75px;
+    margin-left: 120px;
   }
   
   .pokegroup{
-    margin-left: -20px;
+    margin-left: -40px;
     margin-top: 100px;
   }
   
@@ -402,3 +401,4 @@ body {
   .mycards{
     margin-left: 100px;
   }
+
