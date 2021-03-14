@@ -155,7 +155,12 @@ body {
   background-color: white;
   font-family: 'DotGothic16', sans-serif;
   }
-  
+  .btn-xs {
+    max-height: 20px;
+    max-width: 10px;
+    float: right;
+    
+  }
   #dropdownMenuButton{
   background-color: transparent;
   font-family: 'DotGothic16', sans-serif;
@@ -354,12 +359,12 @@ body {
     margin-top: 20px;
     width: 50px;
   }
-  
+/*   
   .delCardBtn{
     font-family: 'DotGothic16', sans-serif;
     margin-top: 20px;
     width: 50px;
-  }
+  } */
   
   .updateCardBtn{
     font-family: 'DotGothic16', sans-serif;

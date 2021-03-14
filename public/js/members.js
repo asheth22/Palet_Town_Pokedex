@@ -1,7 +1,8 @@
  
 $(document).ready(() => {
+ 
   const addCardBtn = $(".addCardBtn");
-  const delCardBtn = $(".delCardBtn");
+  const $delCardBtn = $(".delCardBtn");
   const $updateCardBtn = $(".updateCardBtn");
   const $mycards = $(".mycards")
   const $cardsDD = $(".dropdown-item")
@@ -22,27 +23,35 @@ $(document).ready(() => {
     
   });
 
-
   function loadCards(pokeCards) {
     console.log("pokecards to add: ", pokeCards);
     let $mycards = $(".mycards")
     $mycards.empty();
-    const rowsToAdd = [];
+    // const rowsToAdd = [];
     $mycards.append("<h2> My Cards </h2>")
-   
+    
+ 
     for (let i = 0; i < pokeCards.length; i++) {
       $mycards.append(`<div class="pokecard pokecard${pokeCards[i].energyType}">
-      <p>Pokemon Name:${pokeCards[i].pokeName}</p>
+      <p>Pokemon Name:${pokeCards[i].pokeName}
+      <button type="button" class='btn btn-xs btn-danger dc' id = ${pokeCards[i].id}><i class="fas fa-minus"></i></button></p>
       <p>Nickname: ${pokeCards[i].nickname}</p>
       <p>Card No.: ${pokeCards[i].cardId}</p>
-      <p>Attack: ${pokeCards[i].attack}</p>
+      <p>Attack: ${pokeCards[i].attack}</p>     
       </div>`);
-      // $mycards.append(`<div class="pokecard pokecard${pokeCards[i].energyType}" id ="${pokeCards[i].cardId}">
-      // <button type="button" class="btn btn-danger delCardBtn" id="${pokeCards[i].id}">-</button>
-      // <br>Pokemon Name:${pokeCards[i].pokeName}</br>
-      // <br>Card No.: ${pokeCards[i].cardId}</br>
-      // <br>Attack: ${pokeCards[i].attack}</br>
-      // </div>`);
+      $mycards.on("click", event => {
+        event.preventDefault();    
+        console.log("card selected with mycard", event.target)
+        console.log("card selected with mycard", event.target.cardId)
+        let cardSel = event.target         
+        console.log(event.target)
+        id = $(cardSel).attr('id')
+        console.log("card selected to delete id", id)
+        console.log("activated delete card")    
+        deleteCard()
+        // updateCard()
+      });
+    
     }
   }
 function getCards(userId) {
@@ -71,27 +80,6 @@ function getCards(userId) {
     });
 
   }
-
-  // function addCard() {
-  //   const pokeCard = {
-  //     pokeName: "Bulbasaur",
-  //     energyType: "Grass",
-  //     cardId: "001",
-  //     attack: "Vine Whip",
-  //     nickname: "new-card"
-  //   }
-    
-  //   $.ajax({
-  //     method: "POST",
-  //     url: "/api/addcard/", 
-  //     data: pokeCard
-  //   }).then(data => {     
-  //     console.log("Card added", data);
-     
-  //   });
-
-  // }
-
   function updateCard() {    
     const updateURL = "/api/cards/" + id + "/" + nickname
     console.log("Update URL: ", updateURL)
@@ -122,11 +110,18 @@ function getCards(userId) {
     addCard(); 
   });
   
-  delCardBtn.on("click", event => {
-    event.preventDefault();
-    console.log("activated delete card")    
-    deleteCard()
-  });
+  function removeCard() {
+    $(".delCardBtn").on("click", event => {
+      console.log("deleteCard se;ected");
+      event.preventDefault();
+      let cardSel = event.target
+      console.log(event.target)
+      id = $(cardSel).attr('id')
+      console.log("card selected to delete id", id)
+      console.log("activated delete card")
+      deleteCard()
+    });
+  }
 
   $nicknameBtn.on("click", event => {
     event.preventDefault();
@@ -136,12 +131,18 @@ function getCards(userId) {
   });
 
 
-  $mycards.on("click", event => {
-    event.preventDefault();    
-    console.log("card selected with mycard", event.target)
-    console.log("card selected with mycard", event.target.cardId)
-    // updateCard()
-  });
+  // $mycards.on("click", event => {
+  //   event.preventDefault();    
+  //   console.log("card selected with mycard", event.target)
+  //   console.log("card selected with mycard", event.target.cardId)
+  //   let cardSel = event.target         
+  //   console.log(event.target)
+  //   id = $(cardSel).attr('id')
+  //   console.log("card selected to delete id", id)
+  //   console.log("activated delete card")    
+  //   deleteCard()
+  //   // updateCard()
+  // });
 
   $cardsDD.on("click", event => {
     event.preventDefault();
@@ -183,20 +184,5 @@ function popup(){
      closeWindow();
   }); 
 }
-
-//calls all the functions
-// function main(){ 
-//   // $(document).ready()
- 
-//   $(".updateCardBtn").on("click",function(event){
-//       event.preventDefault();
-//       popup();
-//   });
-//   $(".dropdown-item").on("click",function(event){
-//       event.preventDefault();
-//       let pokemonSelected = this.innerHTML;
-//       selectPokemon(pokemonSelected);
-//   });
-// }
 
 });
