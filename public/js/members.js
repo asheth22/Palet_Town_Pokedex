@@ -63,7 +63,7 @@ function getCards(userId) {
       
     }).then(data => {     
       console.log("Card added", data);
-     
+      window.location.reload()
     });
 
   }
@@ -108,7 +108,7 @@ function getCards(userId) {
       url: "/api/cards/" + id 
     }).then(data => {     
       console.log("Card Deleted", data);
-     
+      window.location.reload() 
     });
   }
 
@@ -120,19 +120,15 @@ function getCards(userId) {
   
   delCardBtn.on("click", event => {
     event.preventDefault();
-    console.log("activated delete card")
-    let cardSel = event.target         
-    console.log(typeof(event.target))
-    id = $(cardSel).attr('id')
-    console.log("card selected to delete id", id)
+    console.log("activated delete card")    
     deleteCard()
   });
 
-  $updateCardBtn.on("click", event => {
-    event.preventDefault();    
-    console.log("activated update card")
-    updateCard()
-  });
+  // $updateCardBtn.on("click", event => {
+  //   event.preventDefault();    
+  //   console.log("activated update card")
+  //   updateCard()
+  // });
 
 
   $mycards.on("click", event => {
@@ -148,10 +144,10 @@ function getCards(userId) {
     console.log(typeof(event.target))
     id = $(cardSel).attr('id')
     console.log("card selected id", id)
-    
+    main();
   });
-  main();
-});
+  
+
 
 //close the modal
 //selcts the pokemon add changes it 
@@ -170,7 +166,7 @@ function closeWindow(){
 function popup(){
   modal.style.display = "block";
   $(".close").on("click",function(event){
-      closeWindow();
+     closeWindow();
   }); 
 }
 
@@ -189,3 +185,4 @@ function main(){
   });
 }
 
+});
