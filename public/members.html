@@ -11,9 +11,9 @@
   <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <!-- <link rel="icon"
+  <link rel="icon"
     href="https://www.flaticon.com/svg/vstatic/svg/743/743977.svg?token=exp=1615338684~hmac=7507413c3f0c3df03cf323db2aa074cc"
-    type="image/icon type"> -->
+    type="image/icon type">
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
     crossorigin="anonymous"></script>
@@ -24,14 +24,12 @@
     integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
     crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/d3bce829f3.js" crossorigin="anonymous"></script>
- 
   <title>Pallet Town Pokedex</title>
 </head>
 
 <body>
   <nav class="navbar" style="background-color: rgb(109, 43, 43)">
-    <a class="navbar-title" href="index.html">Welcome <span class="member-name"></span> to your Pallet Town Pokedex!</a>
-    <a class="navbar-link1" href="members.html"> Training Deck</a>
+    <a class="navbar-title" href="login.html">Welcome <span class="member-name"></span> to your Pallet Town Pokedex!</a>
     <a class="navbar-link2" href="/logout"> Logout</a>
   </nav>
 
@@ -98,7 +96,6 @@
                 <!-- No touchy line 99 -->
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
               </div>
-            </div>  
               <!-- modal body -->
               <div class="modal-body">
                 <div class="pokemonChoices">
@@ -114,12 +111,34 @@
                   </div>
                   <div class="form-group row">
                     <div class="col-sm-10">
-                      <button type="submit" class="btn-submit nicknameBtn">Submit</button>
+                      <button type="submit" class="btn-submit nicknameUpdate">Submit</button>
                     </div>
                 </form>
               </div>
             </div>
-          </div>          
+          </div>
+
+          <!-- <div class="bs-example">
+            <div id="myModal" class="modal fade" tabindex="-1">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Modal Title</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  <div class="modal-body">
+                    <p>This is a simple Bootstrap modal. Click the "Close button", "cross icon" or "dark gray area" to
+                      close or hide the modal.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Close Modal</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+
+        </div>
       </div>
     </div>
     <div class="col mycards">
@@ -203,7 +222,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://code.jquery.com/jquery.js"></script>
   <script type="text/javascript" src="js/members.js"></script>
-  <!-- <script src="script.js"></script> -->
 
 </body>
 

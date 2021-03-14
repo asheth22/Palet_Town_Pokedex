@@ -1,11 +1,9 @@
 form.signup,
 form.login {
-  margin-top: 50px;
+  margin-bottom: 0px;
 }
 body {
     display: flex;
-    justify-content: left;
-    align-items: left;
     flex-direction: column;
     background: white;
     font-family: 'DotGothic16', sans-serif;
@@ -32,18 +30,16 @@ body {
   }
   
   .navbar-link2{
-    margin-right: 50px;
+    margin-right: 30px;
     margin-bottom: 140px;
     color: white;
+    float: left;
   }
   
   
   .container {
     font-family: 'DotGothic16', sans-serif;
-    width: 700px;
-    height: 500px;
-    margin-left: 200px;
-    display: grid;
+    width: 800px;
   }
   
   .container-text{
@@ -52,32 +48,15 @@ body {
   }
   
   .speech-bubble {
-  grid-column: 1/2;
-  grid-row: 2/3;
   text-align: center;
   background: antiquewhite;
-  height: 300px;
+  height: 360px;
   width: 960px;
   border-radius: 30px;
   display: flex;
   justify-content: center;
   position: relative;
   font-family: 'DotGothic16', sans-serif;
-  }
-  
-  .speech-bubble2 {
-  grid-column: 1/2;
-  grid-row: 2/3;
-  text-align: center;
-  background: antiquewhite;
-  height: 350px;
-  width: 900px;
-  border-radius: 30px;
-  position: relative;
-  font-family: 'DotGothic16', sans-serif;
-  padding-bottom: 100px;
-  margin-left: 0px;
-  
   }
   
   .form-group{
@@ -101,22 +80,9 @@ body {
   margin-bottom: -50px;
   }
   
-  .speech-bubble2::after {
-  content: "";
-  border-right: 50px solid antiquewhite;
-  border-bottom: 50px solid transparent;
-  border-left: 50px solid transparent;
-  position: absolute;
-  bottom: 0;
-  left: 70%;
-  width: 0;
-  height: 0;
-  margin-bottom: -50px;
-  }
   
   .oak {
-  grid-column: 2/3;
-  grid-row: 3/4;
+  margin-left: 800px;
   padding: 5px;
   background: white;
   }
@@ -162,9 +128,13 @@ body {
     background-color: rgb(109, 43, 43);
     color: white;
     font-size: 16px;
-    margin-left: 60px;
+    margin-left: 0px;
     width: 100px;
     height: 40px;
+  }
+
+  .signHere{
+    margin-right: 60px;
   }
   
   #circle {
@@ -232,12 +202,13 @@ body {
   background-color: rgb(109, 43, 43);
     color: white;
     font-size: 16px;
-    margin-left: 140px;
+    margin-left: 120px;
     width: 100px;
     height: 40px;
   }
   
   .cardcontainer{
+  width: 800px;
   font-family: 'DotGothic16', sans-serif;
   margin-bottom: 0px;
   display: flex;
@@ -248,8 +219,7 @@ body {
   }
   
   #pokecardcontainer{
-  margin-left: 75px;
-  margin-right: 5px;
+  width: 800px;
   font-family: 'DotGothic16', sans-serif;
   display: flex;
   flex-wrap: wrap;
@@ -374,6 +344,10 @@ body {
   padding: 0px;
   
   }
+
+  .carousel{
+    width: 800px;
+  }
   
   .addCardBtn{
     font-family: 'DotGothic16', sans-serif;
@@ -400,7 +374,8 @@ body {
   }
   
   .pokegroup{
-    margin-top: 00px;
+    margin-left: -20px;
+    margin-top: 100px;
   }
   
   #myModal {
@@ -417,4 +392,8 @@ body {
   .modal-header{
     background-color: rgb(109, 43, 43);
     color: white;
+  }
+
+  .mycards{
+    margin-left: 100px;
   }
