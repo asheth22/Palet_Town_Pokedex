@@ -5,7 +5,10 @@ $(document).ready(() => {
   const $updateCardBtn = $(".updateCardBtn");
   const $mycards = $(".mycards")
   const $cardsDD = $(".dropdown-item")
-  
+  const $nicknameBtn = $(".nicknameUpdate");
+  let nicknameEl = $("#nickname")
+  let nickname
+
   let id = 0;
   let userId; 
   // This file just does a GET request to figure out which user is logged in
@@ -89,16 +92,16 @@ function getCards(userId) {
 
   // }
 
-  function updateCard() {
-    const id = 2;
-    const nickname = 'green'
+  function updateCard() {    
+    const updateURL = "/api/cards/" + id + "/" + nickname
+    console.log("Update URL: ", updateURL)
     $.ajax({
       method: "PUT",
-      url: "/api/cards/" + id + "/" + nickname
+      url: updateURL
       
     }).then(data => {     
       console.log("Card updated", data);
-     
+      window.location.reload() 
     });
   }
 
@@ -125,11 +128,12 @@ function getCards(userId) {
     deleteCard()
   });
 
-  // $updateCardBtn.on("click", event => {
-  //   event.preventDefault();    
-  //   console.log("activated update card")
-  //   updateCard()
-  // });
+  $nicknameBtn.on("click", event => {
+    event.preventDefault();
+    nickname = nicknameEl.val().trim()
+    console.log("activated update card")
+    updateCard()
+  });
 
 
   $mycards.on("click", event => {
@@ -145,10 +149,19 @@ function getCards(userId) {
     console.log(typeof(event.target))
     id = $(cardSel).attr('id')
     console.log("card selected id", id)
-    main();
+    // main();
+
   });
   
-
+  $(".updateCardBtn").on("click",function(event){
+    event.preventDefault();
+    popup();
+});
+$(".dropdown-item").on("click",function(event){
+    event.preventDefault();
+    let pokemonSelected = this.innerHTML;
+    selectPokemon(pokemonSelected);
+});
 
 //close the modal
 //selcts the pokemon add changes it 
@@ -172,18 +185,18 @@ function popup(){
 }
 
 //calls all the functions
-function main(){ 
-  // $(document).ready()
+// function main(){ 
+//   // $(document).ready()
  
-  $(".updateCardBtn").on("click",function(event){
-      event.preventDefault();
-      popup();
-  });
-  $(".dropdown-item").on("click",function(event){
-      event.preventDefault();
-      let pokemonSelected = this.innerHTML;
-      selectPokemon(pokemonSelected);
-  });
-}
+//   $(".updateCardBtn").on("click",function(event){
+//       event.preventDefault();
+//       popup();
+//   });
+//   $(".dropdown-item").on("click",function(event){
+//       event.preventDefault();
+//       let pokemonSelected = this.innerHTML;
+//       selectPokemon(pokemonSelected);
+//   });
+// }
 
 });
