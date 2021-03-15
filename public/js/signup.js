@@ -7,7 +7,6 @@ $(document).ready(() => {
   // When the signup button is clicked, we validate the email and password are not blank
   console.log("Inside sign.up.js")
   signUpForm.on("submit", event => {
-    console.log("inside event listner")
     event.preventDefault();
     const userData = {
       email: emailInput.val().trim(),
@@ -26,13 +25,11 @@ $(document).ready(() => {
   // Does a post to the signup route. If successful, we are redirected to the members page
   // Otherwise we log any errors
   function signUpUser(email, password) {
-    console.log("Inside signup function")
     $.post("/api/signup", {
       email: email,
       password: password
     })
       .then(() => {
-        console.log("user signed up");
         window.location.replace("/members");
         // If there's an error, handle it by throwing up a bootstrap alert
       })
