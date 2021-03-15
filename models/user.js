@@ -26,8 +26,11 @@ module.exports = function (sequelize, DataTypes) {
       user.password,
       bcrypt.genSaltSync(10),
       null
-    );
+    ),
+    {
+    freezeTableName: true,
     timestamps: false,
+    }
   });
 
   User.associate = function (models) {
@@ -35,7 +38,6 @@ module.exports = function (sequelize, DataTypes) {
     // When an Author is deleted, also delete any associated Posts
     User.belongsToMany(models.Pokecharacter, {
       through: 'UserPokemon'
-
     });
   };
   return User;
