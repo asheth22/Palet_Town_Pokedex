@@ -3,7 +3,7 @@ const db = require("../models");
 const passport = require("../config/passport");
 const _ = require('underscore-node')
 
-module.exports = function(app) {
+module.exports = function (app) {
   // Using the passport.authenticate middleware with our local strategy.
   // If the user has valid login credentials, send them to the members page.
   // Otherwise the user will be sent an error
@@ -30,18 +30,18 @@ module.exports = function(app) {
         id: sample
       }
     })
-    console.log("Pokemoncards:" , PokemonCards)
+    console.log("Pokemoncards:", PokemonCards)
     const user = await db.User.create({
       email: req.body.email,
       // username: req.body.username,
       password: req.body.password,
-      
+
       // Pokecharacters:PokemonCards
     })
     console.log("User at signup: ", user)
     user.setPokecharacters(PokemonCards);
     user.save();
-    
+
     res.redirect(307, "/api/login");
 
   });
