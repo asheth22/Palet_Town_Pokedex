@@ -27,6 +27,7 @@ module.exports = function (sequelize, DataTypes) {
       bcrypt.genSaltSync(10),
       null
     );
+    timestamps: false,
   });
 
   User.associate = function (models) {
