@@ -26,8 +26,12 @@ module.exports = function (sequelize, DataTypes) {
       user.password,
       bcrypt.genSaltSync(10),
       null
-    );
-    timestamps: false,
+    ),
+    {
+      freezeTableName: true,
+      timestamps: false,
+      }
+    
   });
 
   User.associate = function (models) {
