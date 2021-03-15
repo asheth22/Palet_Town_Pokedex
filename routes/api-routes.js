@@ -26,7 +26,7 @@ module.exports = function (app) {
     console.log("sample: ", sample)
     const PokemonCards = await db.Pokecharacter.findAll({
       where: {
-        // id: [1,2,3,4,5]
+        
         id: sample
       }
     })
