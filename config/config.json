@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "Ish@n001",
+    "password": "",
     "database": "pokemon",
     "host": "127.0.0.1",
     "dialect": "mysql"
