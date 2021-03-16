@@ -11,10 +11,9 @@ module.exports = function (app) {
     // Sending back a password, even a hashed password, isn't a good idea
     res.json({
       email: req.user.email,
-      // username: req.user.username,
       id: req.user.id
     });
-    // res.render("member")
+
   });
 
   // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to
@@ -23,25 +22,18 @@ module.exports = function (app) {
   app.post("/api/signup", async (req, res) => {
     const cardArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 29, 20, 21, 22, 23, 24, 25]
     const sample = _.sample(cardArr, 5)
-    console.log("sample: ", sample)
     const PokemonCards = await db.Pokecharacter.findAll({
       where: {
-        
         id: sample
       }
     })
-    console.log("Pokemoncards:", PokemonCards)
     const user = await db.User.create({
       email: req.body.email,
-      // username: req.body.username,
       password: req.body.password,
-
-      // Pokecharacters:PokemonCards
     })
-    console.log("User at signup: ", user)
+
     user.setPokecharacters(PokemonCards);
     user.save();
-    // res.render("member")
     res.redirect(307, "/api/login");
   });
 

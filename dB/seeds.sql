@@ -7,7 +7,7 @@ insert into pokecharacter (pokeName, energyType, cardId, attack, nickname) value
 insert into pokecharacter (pokeName, energyType, cardId, attack, nickname) values ("Charizard", "Fire", "006", "Inferno", "");
 insert into pokecharacter (pokeName, energyType, cardId, attack, nickname) values ("Sqirtle", "Water", "007", "Water Pulse", "");
 insert into pokecharacter (pokeName, energyType, cardId, attack, nickname) values ("Wartortle", "Water", "008", "Water Gun", "");
-insert into pokecharacter (pokeName, energyType, cardId, attack, nickname) values ("Blastoise", "Water", "009", "Hydo Pump", "");
+insert into pokecharacter (pokeName, energyType, cardId, attack, nickname) values ("Blastoise", "Water", "009", "Hydro Pump", "");
 insert into pokecharacter (pokeName, energyType, cardId, attack, nickname) values ("Caterpie", "Bug", "010", "Bug Bite", "");
 insert into pokecharacter (pokeName, energyType, cardId, attack, nickname) values ("Metapod", "Bug", "011", "Harden", "");
 insert into pokecharacter (pokeName, energyType, cardId, attack, nickname) values ("Butterfree", "Bug", "012", "Poison Powder", "");
