@@ -14,6 +14,9 @@ Demonstrated the base information of CRUD by utilizing a popular card-game in or
 ### Installation:
 After clicking on the link, users enter their email and password to sign up and create an account.
 
+Visit the Pallet Town Pokedex here:
+https://vast-forest-11479.herokuapp.com/
+
 ### Usage:
 Organize and keep track of your Pokemon Cards
 
