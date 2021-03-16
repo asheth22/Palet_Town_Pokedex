@@ -1,0 +1,174 @@
+<nav class="navbar" style="background-color: rgb(109, 43, 43)">
+  <a class="navbar-title" href="login.html">Welcome <span class="member-name"></span> to your Pallet Town Pokedex!</a>
+  <a class="navbar-link2" href="/logout"> Logout</a>
+</nav>
+
+<div class="container">
+  <div class="row">
+    <div class="column">
+      <div class="pokemonChoices">
+        SELECT THE CARD TO ADD, DELETE & EDIT POKEMON
+      </div>
+      <div id="circle">
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle meMenu" type="button" id="dropdownMenuButton"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Starter POKEMON
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" id="1" href="#">Bulbasaur</a>
+            <a class="dropdown-item" id="2" hhref="#">Ivysaur</a>
+            <a class="dropdown-item" id="3" href="#">Venusaur</a>
+            <a class="dropdown-item" id="4" href="#">Charmander</a>
+            <a class="dropdown-item" id="5" href="#">Charmeleon</a>
+            <a class="dropdown-item" id="6" href="#">Charizard</a>
+            <a class="dropdown-item" id="7" href="#">Sqirtle</a>
+            <a class="dropdown-item" id="8" href="#">Wartortle</a>
+            <a class="dropdown-item" id="9" href="#">Blastoise</a>
+            <a class="dropdown-item" id="10" href="#">Caterpie</a>
+            <a class="dropdown-item" id="11" href="#">Metapod</a>
+            <a class="dropdown-item" id="12" href="#">Butterfree</a>
+            <a class="dropdown-item" id="13" href="#">Weedle</a>
+            <a class="dropdown-item" id="14" href="#">Kakuna</a>
+            <a class="dropdown-item" id="15" href="#">Beedrill</a>
+            <a class="dropdown-item" id="16" href="#">Pidgey</a>
+            <a class="dropdown-item" id="17" href="#">Pidgeotto</a>
+            <a class="dropdown-item" id="18" href="#">Pidgeot</a>
+            <a class="dropdown-item" id="19" href="#">Rattata</a>
+            <a class="dropdown-item" id="20" href="#">Raticate</a>
+            <a class="dropdown-item" id="21" href="#">Spearow</a>
+            <a class="dropdown-item" id="22" href="#">Fearow</a>
+            <a class="dropdown-item" id="23" href="#">Ekans</a>
+            <a class="dropdown-item" id="24" href="#">Arbok</a>
+            <a class="dropdown-item" id="25" href="#">Pikachu</a>
+          </div>
+        </div>
+      </div>
+      <div class="cardControls">
+        <div class="row">
+          <div class="col-sm-4">
+            <button type="button" class="btn btn-success addCardBtn"><i class="fas fa-plus"></i></button>
+          </div>
+          {{!-- <div class="col-sm-4">
+            <button type="button" class="btn btn-danger delCardBtn"><i class="fas fa-minus"></i></button>
+          </div> --}}
+          <div class="col-sm-4">
+            <button type="button" class="btn btn-info updateCardBtn"><i class="fa fa-pencil"
+                aria-hidden="true"></i></button>
+          </div>
+        </div>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+          <div class="modal-content" id="myModal">
+            <!-- modal header -->
+            <div class="modal-header">
+              <h5 class="modal-title">Nicknames</h5>
+              <!-- No touchy line 99 -->
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <!-- modal body -->
+            <div class="modal-body">
+              <div class="pokemonChoices">
+                Please enter a NICKNAME for your
+                <img class="poketitle"
+                  src="https://user-images.githubusercontent.com/74163812/110190308-a3489c80-7df0-11eb-984f-ec1700e21c60.gif">
+              </div>
+              <form>
+                <div class="nn-form-group">
+                  <div class="col-4">
+                    <input type="nickname" class="form-control" id="nickname" placeholder="Please Enter Nickname">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-sm-10">
+                    <button type="submit" class="btn-submit nicknameUpdate">Submit</button>
+                  </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="col mycards">
+    <div class="col">
+      <div id="pokecardcontainer">
+        <div class="cardcontainer">
+          <h1 class="heading">My Cards:</h1>
+        </div>
+        <div id="carouselExampleSlidesOnly" data-interval="false" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row">
+                <div class="col">
+                  <div class="pokecardElectric"></div>
+                  <div class="pokecardGrass"></div>
+                </div>
+                <div class="col">
+                  <div class="pokecardNormal"></div>
+                  <div class="pokecardElectric"></div>
+                </div>
+                <div class="col">
+                  <div class="pokecardPoison"></div>
+                  <div class="pokecardFire"></div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col">
+                  <div class="pokecardBug"></div>
+                  <div class="pokecardFire"></div>
+                </div>
+                <div class="col">
+                  <div class="pokecardWater"></div>
+                  <div class="pokecardBug"></div>
+                </div>
+                <div class="col">
+                  <div class="pokecardFire"></div>
+                  <div class="pokecardElectric"></div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col">
+                  <div class="pokecardFlying"></div>
+                  <div class="pokecardBug"></div>
+                </div>
+                <div class="col">
+                  <div class="pokecardGrass"></div>
+                  <div class="pokecardFire"></div>
+                </div>
+                <div class="col">
+                  <div class="pokecardBug"></div>
+                  <div class="pokecardWater"></div>
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleSlidesOnly" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleSlidesOnly" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="oak2">
+  <img class="pokegroup"
+    src="https://user-images.githubusercontent.com/74163812/111012581-8836d900-836a-11eb-9fd9-2e1ee5f63b27.png"
+    width="500px" height="200px" viewBox="-0.5 -0.5 168 198">
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery.js"></script>
+<script type="text/javascript" src="js/members.js"></script>

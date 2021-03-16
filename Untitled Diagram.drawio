@@ -1,0 +1,119 @@
+<mxfile host="app.diagrams.net" modified="2021-03-05T01:29:26.754Z" agent="5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36" etag="SrFliQs249H8nuktfi6B" version="14.4.4" type="github" pages="3">
+  <diagram id="6gHqPE9KNXjbBCsGmhIw" name="Prof Oak Welcome Page">
+    <mxGraphModel dx="961" dy="533" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="-VyFKxaceNQXp_DGin8k-22" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="90" width="580" height="390" as="geometry" />
+        </mxCell>
+        <mxCell id="-VyFKxaceNQXp_DGin8k-25" value="navbar.&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;oak&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;homepage.&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; trainer deck" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="90" width="580" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="-VyFKxaceNQXp_DGin8k-33" value="Oak" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="280" y="290" width="60" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="-VyFKxaceNQXp_DGin8k-35" value="Oak monologue&lt;br&gt;&lt;br&gt;form to enter username/email/password" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="140" width="280" height="190" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="6Ww6RFRZy6RpiGqPZmzV" name="Page-2">
+    <mxGraphModel dx="961" dy="533" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="7eud1VGkRcoKBq7L_MgI-0" />
+        <mxCell id="7eud1VGkRcoKBq7L_MgI-1" parent="7eud1VGkRcoKBq7L_MgI-0" />
+        <mxCell id="JvXd0UcHR5YM9lTf45X2-0" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="7eud1VGkRcoKBq7L_MgI-1">
+          <mxGeometry x="80" y="115" width="720" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="JvXd0UcHR5YM9lTf45X2-1" value="navbar (same as before)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="7eud1VGkRcoKBq7L_MgI-1">
+          <mxGeometry x="80" y="110" width="720" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="M_Kbi6RMSOCed-zVn-Ap-1" value="pokeball image" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="7eud1VGkRcoKBq7L_MgI-1">
+          <mxGeometry x="120" y="200" width="270" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="M_Kbi6RMSOCed-zVn-Ap-2" value="dropdown menu" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="7eud1VGkRcoKBq7L_MgI-1">
+          <mxGeometry x="195" y="350" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="az7CtIanJaVI3iCDTZgW-0" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="7eud1VGkRcoKBq7L_MgI-1">
+          <mxGeometry x="450" y="200" width="315" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="az7CtIanJaVI3iCDTZgW-4" value="Please enter a nickname for your pokemon" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="7eud1VGkRcoKBq7L_MgI-1">
+          <mxGeometry x="470" y="230" width="270" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NzN0ZW2_B9KfpvS19L1O-0" value="form" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="7eud1VGkRcoKBq7L_MgI-1">
+          <mxGeometry x="545" y="320" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NzN0ZW2_B9KfpvS19L1O-1" value="enter button" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="7eud1VGkRcoKBq7L_MgI-1">
+          <mxGeometry x="380" y="480" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="432j81DgJn0_x31G_QGU" name="training deck/pokedex">
+    <mxGraphModel dx="1811" dy="533" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="Qw6kD-3jXrs5smbRnkpO-0" />
+        <mxCell id="Qw6kD-3jXrs5smbRnkpO-1" parent="Qw6kD-3jXrs5smbRnkpO-0" />
+        <mxCell id="Qw6kD-3jXrs5smbRnkpO-2" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="Qw6kD-3jXrs5smbRnkpO-1">
+          <mxGeometry x="30" y="280" width="290" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="Qw6kD-3jXrs5smbRnkpO-3" value="pic" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="Qw6kD-3jXrs5smbRnkpO-1">
+          <mxGeometry x="60" y="310" width="90" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="Qw6kD-3jXrs5smbRnkpO-4" value="pokedex" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="Qw6kD-3jXrs5smbRnkpO-1">
+          <mxGeometry x="130" y="260" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Qw6kD-3jXrs5smbRnkpO-5" value="name" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Qw6kD-3jXrs5smbRnkpO-1">
+          <mxGeometry x="60" y="420" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Qw6kD-3jXrs5smbRnkpO-6" value="type" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Qw6kD-3jXrs5smbRnkpO-1">
+          <mxGeometry x="170" y="440" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Qw6kD-3jXrs5smbRnkpO-7" value="id" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Qw6kD-3jXrs5smbRnkpO-1">
+          <mxGeometry x="260" y="440" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Qw6kD-3jXrs5smbRnkpO-8" value="one move" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Qw6kD-3jXrs5smbRnkpO-1">
+          <mxGeometry x="170" y="325" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Qw6kD-3jXrs5smbRnkpO-9" value="" style="endArrow=none;html=1;" edge="1" parent="Qw6kD-3jXrs5smbRnkpO-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="560" as="sourcePoint" />
+            <mxPoint x="400" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Qw6kD-3jXrs5smbRnkpO-10" value="&lt;font color=&quot;#66cc00&quot;&gt;update nickname&lt;/font&gt;&lt;br&gt;stats of pokemon" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Qw6kD-3jXrs5smbRnkpO-1">
+          <mxGeometry x="440" y="240" width="120" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="Qw6kD-3jXrs5smbRnkpO-11" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Qw6kD-3jXrs5smbRnkpO-1">
+          <mxGeometry x="440" y="370" width="120" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="Qw6kD-3jXrs5smbRnkpO-12" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Qw6kD-3jXrs5smbRnkpO-1">
+          <mxGeometry x="640" y="240" width="120" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="Qw6kD-3jXrs5smbRnkpO-13" value="pokemon" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Qw6kD-3jXrs5smbRnkpO-1">
+          <mxGeometry x="440" y="240" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Qw6kD-3jXrs5smbRnkpO-14" value="Trainer Name" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Qw6kD-3jXrs5smbRnkpO-1">
+          <mxGeometry x="520" y="190" width="170" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Qw6kD-3jXrs5smbRnkpO-15" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Qw6kD-3jXrs5smbRnkpO-1">
+          <mxGeometry x="640" y="370" width="120" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="Qw6kD-3jXrs5smbRnkpO-16" value="swap pokemon&lt;br&gt;&lt;br&gt;dropdown" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Qw6kD-3jXrs5smbRnkpO-1">
+          <mxGeometry x="545" y="490" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Qw6kD-3jXrs5smbRnkpO-17" value="" style="endArrow=classic;html=1;" edge="1" parent="Qw6kD-3jXrs5smbRnkpO-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-2" y="140" as="sourcePoint" />
+            <mxPoint x="770" y="140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Qw6kD-3jXrs5smbRnkpO-18" value="navbar" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Qw6kD-3jXrs5smbRnkpO-1">
+          <mxGeometry x="-50" y="140" width="820" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

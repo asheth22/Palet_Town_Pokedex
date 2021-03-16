@@ -1,0 +1,404 @@
+form.signup,
+form.login {
+  margin-bottom: 0px;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    font-family: 'DotGothic16', sans-serif;
+  }
+  
+  .navbar{
+  height: 75px;
+  margin-bottom: 50px;
+  font-family: 'DotGothic16', sans-serif;
+  font-size: 20px;
+  color: white;
+  }
+  
+  .navbar-title{
+    font-size: 35px;
+    margin-bottom: 150px;
+    color: white;
+  }
+  
+  .navbar-link1{
+    margin-left: 400px;
+    margin-bottom: 140px;
+    color: white;
+  }
+  
+  .navbar-link2{
+    margin-right: 30px;
+    margin-bottom: 140px;
+    color: white;
+    float: left;
+  }
+  
+  
+  .container {
+    font-family: 'DotGothic16', sans-serif;
+    width: 800px;
+  }
+  
+  .container-text{
+    margin-top: 40px;
+    margin-right: 50px;
+  }
+  
+  .speech-bubble {
+  text-align: center;
+  background: antiquewhite;
+  height: 360px;
+  width: 960px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  font-family: 'DotGothic16', sans-serif;
+  }
+  
+  .form-group{
+    margin-top: 30px;
+  }
+  
+  .col-form-label{
+  margin-right: 30px;
+  }
+  
+  .speech-bubble::after {
+  content: "";
+  border-right: 50px solid antiquewhite;
+  border-bottom: 50px solid transparent;
+  border-left: 50px solid transparent;
+  position: absolute;
+  bottom: 0;
+  left: 70%;
+  width: 0;
+  height: 0;
+  margin-bottom: -50px;
+  }
+  
+  
+  .oak {
+  margin-left: 800px;
+  padding: 5px;
+  background: white;
+  }
+  
+  .controls {
+  grid-column: 1/2;
+  grid-row: 3/4;
+  padding: 5px;
+  text-align: center;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  
+  button {
+  font-family: 'DotGothic16', sans-serif;
+  font-size: 24px;
+  border: none;
+  padding: 5px;
+  width: 300px;
+  height: 50px;
+  border-radius: 30px;
+  background: tomato;
+  color: #333;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.3);
+  }
+  
+  button:hover,
+  button:focus {
+  border: 1px dotted #333;
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
+  }
+  
+  #result {
+  font-size: 40px;
+  font-family: 'DotGothic16', sans-serif;
+  color: #333;
+  }
+  
+  .btn-signIn{
+    background-color: rgb(109, 43, 43);
+    color: white;
+    font-size: 16px;
+    margin-left: 0px;
+    width: 100px;
+    height: 40px;
+  }
+
+  .signHere{
+    margin-right: 60px;
+  }
+  
+  #circle {
+  margin-left: 75px;
+  width: 200px;
+  height: 200px;
+  background-image: url("https://user-images.githubusercontent.com/74163812/110149491-1b40a380-7dac-11eb-9c8c-6fbcf43f56aa.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 200px;
+  justify-content: center;
+  font-family: 'DotGothic16', sans-serif;
+  }
+  
+  .dropdown{
+  margin-top: 25px;
+  margin-left: 0px;
+  background-color: white;
+  font-family: 'DotGothic16', sans-serif;
+  }
+  .btn-xs {
+    max-height: 25px;
+    max-width: 10px;
+    float: right;
+    text-align: center;
+    display: inline-flex;
+    align-items: center; 
+    margin-right: 2px;
+  }
+
+  #dropdownMenuButton{
+  background-color: transparent;
+  font-family: 'DotGothic16', sans-serif;
+  font-size: 16px;
+  color: black;
+  width: 200px;
+  }
+  
+  .pokemonChoices{
+  font-size: 16px;
+  padding-top: 40px;
+  margin-left: 75px;
+  width: 200px;
+  }
+  
+  .container2{
+  margin-left: 150px;
+  justify-content: center;
+  }
+  
+  .oak2{
+  margin-left: 650px;
+  position:relative;
+  top: -100px;
+  }
+  
+  .nicknameContainer{
+  font-size: 16px;
+  margin-left: 200px;
+  }
+  
+  #nickname{
+  width: 350px; 
+  }
+  
+  .poketitle{
+  margin-right: 30px;
+  background-color: antiquewhite;
+  width: 250px;
+  height: 120px;
+  }
+  
+  .btn-submit{
+  background-color: rgb(109, 43, 43);
+    color: white;
+    font-size: 16px;
+    margin-left: 120px;
+    width: 100px;
+    height: 40px;
+  }
+  
+  .cardcontainer{
+  width: 900px;
+  font-family: 'DotGothic16', sans-serif;
+  margin-bottom: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  flex-grow: 0;
+  padding: 0px;
+  }
+  
+  #pokecardcontainer{
+  width: 900px;
+  font-family: 'DotGothic16', sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  flex-grow: 0;
+  padding: 0px
+  }
+  
+  .pokecardWater{
+  height: 150px;
+  width: 225px;
+  margin: 5px;
+  margin-bottom: 5px;
+  display: inline-block;
+  background-color: rgb(123,169,247);
+  border:2.5px;
+  border-color: black;
+  border-style:solid; 
+  }
+  
+  .pokecardGrass{
+  height: 150px;
+  width: 225px;
+  margin: 5px;
+  margin-bottom: 5px;
+  display: inline-block;
+  background-color: rgb(152,203,151);
+  border:2.5px;
+  border-color: black;
+  border-style:solid; 
+  }
+  
+  .pokecardFire{
+  height: 150px;
+  width: 225px;
+  margin: 5px;
+  margin-bottom: 5px;
+  display: inline-block;
+  background-color: #fe0065;
+  border:2.5px;
+  border-color: black;
+  border-style:solid; 
+  }
+  
+  .pokecardElectric{
+  height: 150px;
+  width: 225px;
+  margin: 5px;
+  margin-bottom: 5px;
+  display: inline-block;
+  background-color: #ffeb3a;
+  border:2.5px;
+  border-color: black;
+  border-style:solid; 
+  }
+  
+  .pokecardPoison{
+  height: 150px;
+  width: 225px;
+  margin: 5px;
+  margin-bottom: 5px;
+  display: inline-block;
+  background-color: #3bb47d;
+  border:2.5px;
+  border-color: black;
+  border-style:solid; 
+  }
+  .pokecardNormal{
+  height: 150px;
+  width: 225px;
+  margin: 5px;
+  margin-bottom: 5px;
+  display: inline-block;
+  background-color: #e1bdd3;
+  border:2.5px;
+  border-color: black;
+  border-style:solid; 
+  }
+  
+  .pokecardFlying{
+  height: 150px;
+  width: 225px;
+  margin: 5px;
+  margin-bottom: 5px;
+  display: inline-block;
+  background-color: #a78f7c;
+  border:2.5px;
+  border-color: black;
+  border-style:solid; 
+  }
+  
+  .pokecardBug{
+  height: 150px;
+  width: 225px;
+  margin: 5px;
+  margin-bottom: 5px;
+  display: inline-block;
+  background-color: #a55d89;
+  border:2.5px;
+  border-color: black;
+  border-style:solid; 
+  }
+  
+  .carousel-control-next,
+  .carousel-control-prev /*, .carousel-indicators */ {
+      filter: invert(100%);
+  }
+  
+  .carousel-control-next,
+  .carousel-control-prev /*, .carousel-indicators */ {
+      filter: invert(100%);
+  }
+  
+  .carousel-item.active{
+  visibility: visible;
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin-left: 0px;
+  margin-bottom: 0px;
+  margin: 0px;
+  padding: 0px;
+  
+  }
+
+  .carousel{
+    width: 800px;
+  }
+  
+  .addCardBtn{
+    font-family: 'DotGothic16', sans-serif;
+    margin-top: 20px;
+    width: 50px;
+  }
+  
+  
+  .updateCardBtn{
+    font-family: 'DotGothic16', sans-serif;
+    align-content: center;
+    margin-top: 20px;
+    width: 50px;
+  
+  }
+  
+  .cardControls{
+    margin-left: 120px;
+  }
+  
+  .pokegroup{
+    margin-left: -40px;
+    margin-top: 100px;
+  }
+  
+  #myModal {
+    width: 500px; 
+    margin-left: 50px;
+    margin-top: 60px;
+  }
+  
+  .modal-body{
+    justify-content: center;
+    background-color: antiquewhite;
+  }
+  
+  .modal-header{
+    background-color: rgb(109, 43, 43);
+    color: white;
+  }
+
+  .mycards{
+    margin-left: 100px;
+  }
+
