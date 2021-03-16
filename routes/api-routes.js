@@ -41,9 +41,8 @@ module.exports = function (app) {
     console.log("User at signup: ", user)
     user.setPokecharacters(PokemonCards);
     user.save();
-    res.render("member")
-    // res.redirect(307, "/api/login");
-
+    // res.render("member")
+    res.redirect(307, "/api/login");
   });
 
   // Route for logging user out
