@@ -4,76 +4,89 @@ const _ = require('underscore-node')
 
 // Routes
 // =============================================================
-module.exports = function(app) {
-
-  app.get("/api/cards/:id", function(req, res) {    
-    db.User.findAll({  
+module.exports = function (app) {
+  // Get all cards for a user
+  app.get("/api/cards/:id", function (req, res) {
+    db.User.findAll({
       where: {
         id: req.params.id
       },
       include: [db.Pokecharacter]
-    }).then(function (dbCards) {     
+    }).then(function (dbCards) {
       res.json(dbCards);
     });
 
   });
-  
-  // POST route for saving a new todo
-  app.post("/api/addCard/", function(req, res) {
-  
-    db.Pokecharacter.create({
-      pokeName: req.body.pokeName,
-      energyType: req.body.energyType,
-      cardId: req.body.cardId,
-      attack: req.body.attack,
-      nickname: req.body.nickname,
-    }).then(function(dbCards) {
-      
-      res.json(dbCards);
-    });
-  });
 
-  app.delete("/api/cards/:id/:userId", async (req, res) => {
-    db.User.findAll({  
+  // POST route for adding a new card to the user
+  app.post("/api/addcard/:id", async (req, res) => {
+
+    const cardId = req.params.id
+    db.User.findOne({
       where: {
-        id: req.params.id
+        id: req.user.id
       },
       include: [db.Pokecharacter]
-    }).then(async function (dbCards, userId) {
-      
-      
+    }).then(async function (user) {
+
+      console.log("user.Pokecharacter: ", user.Pokecharacters)
+      let PokemonCards = user.Pokecharacters.map(card => card.id);
+
+      PokemonCards.push(cardId);
+
+      user.setPokecharacters(PokemonCards);
+
+      user.save();
+      res.json(user);
+    });
+  })
+
+  // DELETE route for removing a card from the user
+  app.delete("/api/cards/:id", async (req, res) => {
+    const userId = req.user.id
+    const cardId = req.params.id;
+    console.log("userid in delete: ", userId)
+    console.log("cardid in delete: ", cardId)
+    db.User.findAll({
+      where: {
+        id: req.user.id
+      },
+      include: [db.Pokecharacter]
+    }).then(async function (userC, userId) {
+      console.log(userC[0].Pokecharacters);
+      let userCards = userC[0].Pokecharacters
       let PokemonCards = []
-     
-      for (i = 0; i < dbCards.length; i++) {
-        if (dbCards[i].id !== req.params.id) {
-          PokemonCards.push(dbCards[i]);
+      console.log(userCards[0].dataValues.id, "card id", req.params.id)
+      for (i = 0; i < userCards.length; i++) {
+        if (userCards[i].dataValues.id != req.params.id) {
+          PokemonCards.push(userCards[i]);
         }
       }
-      
-      const user =  await db.User.findOne({
+      console.log("Pokecards after delete: ", PokemonCards)
+      const user = await db.User.findOne({
         where: {
-          id: 25
-        },                
+          id: req.user.id
+        },
       })
-      
+
       user.setPokecharacters(PokemonCards.map(card => card.id));
-      
-      user.save();    
-      res.json(dbCards);
+      user.save();
+      res.json(userC);
     });
-        
+
 
   });
- 
-  app.put("/api/cards/:id/:nickname", function(req, res) {
+
+  // PUT route for updating a column on the server
+  app.put("/api/cards/:id/:nickname", function (req, res) {
 
     db.Pokecharacter.update({
-      nickname: req.params.nickname,      
+      nickname: req.params.nickname,
     }, {
       where: {
         id: req.params.id
       }
-    }).then(function(dbCards) {
+    }).then(function (dbCards) {
       res.json(dbCards);
     });
   });
