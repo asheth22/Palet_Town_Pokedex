@@ -14,7 +14,7 @@ module.exports = function (app) {
       // username: req.user.username,
       id: req.user.id
     });
-    res.render("member")
+    // res.render("member")
   });
 
   // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to
